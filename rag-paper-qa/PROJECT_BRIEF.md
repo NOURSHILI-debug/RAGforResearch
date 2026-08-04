@@ -14,10 +14,10 @@ Build a small retrieval-augmented generation pipeline for the paper "Attention I
 
 ## Status Checklist
 - [x] Project scaffold created
-- [ ] Download the paper PDF into data/papers/
-- [ ] Run ingest.py to create processed blocks
-- [ ] Run chunk.py to generate chunks.json
-- [ ] Configure Pinecone environment variables
-- [ ] Run embed_and_store.py to upload vectors
-- [ ] Run query.py to verify retrieval
+- [x] Download the paper PDFs into data/papers/
+- [x] Run ingest.py to create processed blocks
+- [x] Run chunk.py to generate chunks.json
+- [x] Configure Pinecone environment variables (see .env.example)
+- [x] Run embed_and_store.py to upload vectors
+- [x] Run query.py to verify retrieval
 - [ ] Expand evaluation harness in eval/ during Week 2

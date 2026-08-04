@@ -1,0 +1,11 @@
+# Secrets - never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated pipeline artifacts
+data/processed/
+data/chunks.json
+data/processed/embeddings.json
