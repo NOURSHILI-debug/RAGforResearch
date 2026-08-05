@@ -1,56 +1,69 @@
-📚 RAG for Research Paper Question Answering
+# 📚 RAG for Research
 
-A lightweight Retrieval-Augmented Generation (RAG) pipeline for indexing and retrieving information from research papers.
+A lightweight **Retrieval-Augmented Generation (RAG)** pipeline for indexing and semantically searching research papers.
 
-This project demonstrates the core stages of a modern RAG system by processing academic PDFs into searchable vector embeddings using Sentence Transformers and Pinecone.
+This project demonstrates the core components of a modern RAG system by processing academic PDFs into searchable vector embeddings using **Sentence Transformers** and **Pinecone**. It is designed as a learning project to understand how retrieval systems work before integrating a Large Language Model (LLM).
 
-Features
-PDF ingestion
-Automatic text extraction
-Structured document parsing
-Overlapping chunk generation
-Semantic embeddings with MiniLM
-Local vector search
-Pinecone integration
-Metadata-aware retrieval
-Architecture
-Research Paper (PDF)
-        │
-        ▼
-Text Extraction
-        │
-        ▼
-Structured Blocks
-(page, heading, source)
-        │
-        ▼
-Chunking
-(overlapping passages)
-        │
-        ▼
-SentenceTransformer
-(all-MiniLM-L6-v2)
-        │
-        ▼
-Embedding Vectors
-        │
-        ├──────────────► Local Storage
-        │
-        ▼
-Pinecone Vector Database
-        │
-        ▼
-Semantic Retrieval
-        │
-        ▼
-Relevant Context
-Project Structure
+---
+
+## 🚀 Features
+
+- 📄 PDF text extraction
+- 🧩 Structured document parsing
+- ✂️ Overlapping chunk generation
+- 🧠 Semantic embeddings using Sentence Transformers
+- 📦 Local embedding storage
+- ☁️ Pinecone vector database integration
+- 🔍 Semantic similarity search
+- 📝 Metadata-aware retrieval
+
+---
+
+# 🏗️ Architecture
+
+```text
+                 Research Paper (PDF)
+                         │
+                         ▼
+                  Text Extraction
+                         │
+                         ▼
+                Structured JSON Blocks
+              (page, heading, content)
+                         │
+                         ▼
+                  Chunk Generation
+                 (overlapping chunks)
+                         │
+                         ▼
+        SentenceTransformer Embeddings
+          (all-MiniLM-L6-v2, 384 dims)
+                         │
+          ┌──────────────┴──────────────┐
+          │                             │
+          ▼                             ▼
+   Local embeddings.json         Pinecone Index
+          │                             │
+          └──────────────┬──────────────┘
+                         ▼
+                  Semantic Retrieval
+                         │
+                         ▼
+                 Most Relevant Chunks
+```
+
+---
+
+# 📂 Project Structure
+
+```text
 rag-paper-qa/
 │
 ├── data/
 │   ├── papers/
 │   ├── processed/
-│   └── chunks.json
+│   ├── chunks.json
+│   └── embeddings.json
 │
 ├── src/
 │   ├── ingest.py
@@ -58,103 +71,243 @@ rag-paper-qa/
 │   ├── embed_and_store.py
 │   └── query.py
 │
-├── eval/
-├── notebooks/
 ├── requirements.txt
-└── PROJECT_BRIEF.md
-Pipeline
-1. Ingestion
+├── .env.example
+└── README.md
+```
 
-ingest.py
+---
 
-Reads one or more research papers
-Extracts text page by page
-Detects headings
-Produces structured JSON blocks
-2. Chunking
+# ⚙️ Tech Stack
 
-chunk.py
+- Python
+- Sentence Transformers
+- Pinecone
+- NumPy
+- PyPDF
+- python-dotenv
 
-Converts structured blocks into overlapping chunks suitable for embedding.
+---
 
-Default:
+# 🔄 Pipeline
 
-Chunk size: 3 blocks
-Overlap: 1 block
-3. Embedding
+## 1. Document Ingestion
 
-embed_and_store.py
+The ingestion step extracts text from one or more PDF research papers and converts them into structured JSON blocks containing metadata such as:
 
-Embeddings are generated using
+- Page number
+- Heading
+- Paragraph content
 
-sentence-transformers/all-MiniLM-L6-v2
+Run:
 
-(384-dimensional vectors)
-
-Vectors can be:
-
-saved locally
-uploaded to Pinecone
-4. Retrieval
-
-query.py
-
-Supports:
-
-Local semantic search
-Pinecone vector search
-
-Queries are embedded using the same embedding model before cosine similarity search.
-
-Installation
-git clone https://github.com/NOURSHILI-debug/RAGforResearch.git
-
-cd RAGforResearch/rag-paper-qa
-
-python -m venv .venv
-
-source .venv/bin/activate
-# Windows
-.venv\Scripts\activate
-
-pip install -r requirements.txt
-Environment Variables
-
-Create a .env file:
-
-PINECONE_API_KEY=your_key
-
-PINECONE_INDEX_NAME=rag-paper-qa
-
-PINECONE_REGION=us-east-1
-
-PINECONE_CLOUD=aws
-Usage
-Extract PDFs
+```bash
 python src/ingest.py
-Generate chunks
-python src/chunk.py
-Create embeddings
-python src/embed_and_store.py
-Query locally
-python src/query.py --backend local
-Query Pinecone
-python src/query.py --backend pinecone
-Technologies
-Python
-Sentence Transformers
-Pinecone
-NumPy
-PyPDF
-python-dotenv
-Future Work
-Full LLM answer generation
-Hybrid search (BM25 + Dense Retrieval)
-Cross-encoder reranking
-Evaluation metrics (Recall@k, MRR)
-Multi-document support
-Web interface (Streamlit/Gradio)
-FAISS and ChromaDB backends
-Learning Objectives
+```
 
-This project was developed to understand the complete RAG indexing pipeline, including document ingestion, preprocessing, embedding generation, vector storage, and semantic retrieval.
+---
+
+## 2. Chunk Generation
+
+The structured document is divided into overlapping chunks to preserve context during retrieval.
+
+Run:
+
+```bash
+python src/chunk.py
+```
+
+---
+
+## 3. Embedding Generation
+
+Each chunk is converted into a dense vector representation using the **all-MiniLM-L6-v2** Sentence Transformer model.
+
+Embeddings can be:
+
+- Stored locally
+- Uploaded to Pinecone
+
+Run:
+
+```bash
+python src/embed_and_store.py
+```
+
+---
+
+## 4. Semantic Search
+
+A user query is embedded using the same embedding model and compared against stored vectors using cosine similarity.
+
+Run:
+
+```bash
+python src/query.py --backend local
+```
+
+or
+
+```bash
+python src/query.py --backend pinecone
+```
+
+---
+
+# 🛠️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/NOURSHILI-debug/RAGforResearch.git
+```
+
+Navigate to the project
+
+```bash
+cd RAGforResearch/rag-paper-qa
+```
+
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+PINECONE_API_KEY=YOUR_API_KEY
+PINECONE_INDEX_NAME=rag-paper-qa
+PINECONE_CLOUD=aws
+PINECONE_REGION=us-east-1
+```
+
+---
+
+# 💻 Usage
+
+### Step 1 — Extract the PDF
+
+```bash
+python src/ingest.py
+```
+
+### Step 2 — Generate chunks
+
+```bash
+python src/chunk.py
+```
+
+### Step 3 — Create embeddings
+
+```bash
+python src/embed_and_store.py
+```
+
+### Step 4 — Search
+
+Local search
+
+```bash
+python src/query.py --backend local
+```
+
+Pinecone search
+
+```bash
+python src/query.py --backend pinecone
+```
+
+---
+
+# 📊 Current Capabilities
+
+✅ PDF ingestion
+
+✅ Structured parsing
+
+✅ Chunk generation
+
+✅ Embedding generation
+
+✅ Pinecone indexing
+
+✅ Semantic retrieval
+
+---
+
+# 🚧 Future Improvements
+
+- Integrate an LLM to generate answers from retrieved context
+- Support multiple research papers
+- Add FAISS and ChromaDB backends
+- Hybrid search (BM25 + Dense Retrieval)
+- Cross-encoder reranking
+- Evaluation metrics (Recall@k, Precision@k, MRR)
+- Streamlit web interface
+- Docker support
+
+---
+
+# 🎯 Learning Objectives
+
+This project was built to gain hands-on experience with the core stages of Retrieval-Augmented Generation (RAG), including:
+
+- Document preprocessing
+- Semantic chunking
+- Dense vector embeddings
+- Vector databases
+- Similarity search
+- Information retrieval pipelines
+
+---
+
+# 📚 References
+
+- Sentence Transformers
+- Pinecone
+- Retrieval-Augmented Generation (RAG)
+- Dense Passage Retrieval (DPR)
+
+---
+
+# 👩‍💻 Author
+
+**Nour Shili**
+
+Final-year ICT Engineering Student @ SUP'COM
+
+Passionate about Artificial Intelligence, Machine Learning, Large Language Models, Retrieval-Augmented Generation (RAG), and AI Systems.
+
+GitHub: https://github.com/NOURSHILI-debug
+
+---
+
+# ⭐ If you found this project useful
+
+Feel free to **star the repository** and contribute with ideas or improvements!
