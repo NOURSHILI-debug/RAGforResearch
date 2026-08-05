@@ -16,6 +16,7 @@ This project demonstrates the core components of a modern RAG system by processi
 - ☁️ Pinecone vector database integration
 - 🔍 Semantic similarity search
 - 📝 Metadata-aware retrieval
+- 💬 Answer generation from retrieved context (Google Gemini)
 
 ---
 
@@ -69,7 +70,8 @@ rag-paper-qa/
 │   ├── ingest.py
 │   ├── chunk.py
 │   ├── embed_and_store.py
-│   └── query.py
+│   ├── query.py
+│   └── ask.py
 │
 ├── requirements.txt
 ├── .env.example
@@ -83,6 +85,7 @@ rag-paper-qa/
 - Python
 - Sentence Transformers
 - Pinecone
+- Google Gemini (generation)
 - NumPy
 - PyPDF
 - python-dotenv
@@ -154,6 +157,26 @@ python src/query.py --backend pinecone
 
 ---
 
+## 5. Answer Generation
+
+The retrieved chunks are passed as context to a Gemini model, which generates a grounded answer with inline citations to the source chunks.
+
+Run:
+
+```bash
+python src/ask.py --query "What is the transformer architecture?" --backend local
+```
+
+or
+
+```bash
+python src/ask.py --query "What is the transformer architecture?" --backend pinecone
+```
+
+Options: `--top-k` (context chunks, default 5), `--model` (override `GEMINI_MODEL`), `--embeddings`.
+
+---
+
 # 🛠️ Installation
 
 Clone the repository
@@ -205,6 +228,9 @@ PINECONE_API_KEY=YOUR_API_KEY
 PINECONE_INDEX_NAME=rag-paper-qa
 PINECONE_CLOUD=aws
 PINECONE_REGION=us-east-1
+
+GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+GEMINI_MODEL=gemini-3.5-flash
 ```
 
 ---
@@ -243,6 +269,12 @@ Pinecone search
 python src/query.py --backend pinecone
 ```
 
+### Step 5 — Ask a question (RAG)
+
+```bash
+python src/ask.py --query "What is the transformer architecture?" --backend local
+```
+
 ---
 
 # 📊 Current Capabilities
@@ -259,11 +291,12 @@ python src/query.py --backend pinecone
 
 ✅ Semantic retrieval
 
+✅ Answer generation (Gemini)
+
 ---
 
 # 🚧 Future Improvements
 
-- Integrate an LLM to generate answers from retrieved context
 - Support multiple research papers
 - Add FAISS and ChromaDB backends
 - Hybrid search (BM25 + Dense Retrieval)

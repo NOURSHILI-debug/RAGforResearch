@@ -1,7 +1,7 @@
 # RAG for Research Paper QA
 
 ## Goal
-Build a small retrieval-augmented generation pipeline for the paper "Attention Is All You Need". The system ingests a PDF, converts it into structured blocks, chunks those blocks into embeddable passages, and prepares the data for vector retrieval with Pinecone.
+Build a small retrieval-augmented generation pipeline for the paper "Attention Is All You Need". The system ingests a PDF, converts it into structured blocks, chunks those blocks into embeddable passages, retrieves relevant passages for a query, and generates a grounded answer with Google Gemini.
 
 ## Project Structure
 - data/papers/: one real PDF source file
@@ -20,4 +20,5 @@ Build a small retrieval-augmented generation pipeline for the paper "Attention I
 - [x] Configure Pinecone environment variables (see .env.example)
 - [x] Run embed_and_store.py to upload vectors
 - [x] Run query.py to verify retrieval
+- [x] Run ask.py to generate grounded answers (Gemini)
 - [ ] Expand evaluation harness in eval/ during Week 2
