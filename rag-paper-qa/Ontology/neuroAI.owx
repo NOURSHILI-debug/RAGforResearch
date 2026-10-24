@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/neuroAI"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/neuroAI">
+    <Prefix name="" IRI="http://www.semanticweb.org/neuroAI/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#OWLClass_002242ed_a377_4e95_b1b0_ead860e9906e"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_4666bf9a_fbd1_45d7_bdcb_763ba246a9c8"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_5f9e7cae_cb73_4fe5_837c_0695f412e5f5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_93f641ed_6a77_4f81_818e_7ec5940555be"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_bc953cc6_9e5a_4157_8df4_d2688bbdfd2a"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_febf2e31_ebf1_40a3_8329_fcea6ea901bb"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_6954ec35_fdba_4f1c_a32a_3e72a05104d8"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_69a06433_d176_429b_804f_413d5894074e"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_6e3fec05_b7af_4ace_b774_ad33e56971b2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_7281ff24_fa9d_46db_b356_992f78cfd409"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_86cb5373_9540_4ddd_8c19_9efe9bfa9070"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_a068f00e_9895_43b9_9b0c_a9e561361e62"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OWLDataProperty_25d6a7c1_769a_42a6_bad0_c2a9c5764698"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OWLDataProperty_2f4f89cf_152a_4723_8e50_c7a75976c454"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OWLDataProperty_353d7e0f_7ca4_4120_9b48_80535161484c"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OWLDataProperty_419ec48f_3b82_45d2_8830_d3c26740e311"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OWLDataProperty_fb03defe_8160_4d73_9755_d2f6b3baece6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_16da680d_c9b4_4a0b_bdcd_97ccce2b6abf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_4bd26d61_777e_40fe_89c5_70be2f9de2cb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_59ef3188_ecc1_4d9c_9de8_9bd141b19000"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_c68d7048_8522_4d90_bbd5_56a349b41cf7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_df1b4551_c916_4111_bdbf_43961edf7d05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_efa3dafb_8252_4fa3_bb3a_e56f85ed1947"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#OWLClass_93f641ed_6a77_4f81_818e_7ec5940555be"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_16da680d_c9b4_4a0b_bdcd_97ccce2b6abf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OWLClass_5f9e7cae_cb73_4fe5_837c_0695f412e5f5"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_4bd26d61_777e_40fe_89c5_70be2f9de2cb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_59ef3188_ecc1_4d9c_9de8_9bd141b19000"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OWLClass_bc953cc6_9e5a_4157_8df4_d2688bbdfd2a"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_df1b4551_c916_4111_bdbf_43961edf7d05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OWLClass_febf2e31_ebf1_40a3_8329_fcea6ea901bb"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_efa3dafb_8252_4fa3_bb3a_e56f85ed1947"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#OWLObjectProperty_6954ec35_fdba_4f1c_a32a_3e72a05104d8"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_16da680d_c9b4_4a0b_bdcd_97ccce2b6abf"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_16da680d_c9b4_4a0b_bdcd_97ccce2b6abf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#OWLObjectProperty_86cb5373_9540_4ddd_8c19_9efe9bfa9070"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_4bd26d61_777e_40fe_89c5_70be2f9de2cb"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_df1b4551_c916_4111_bdbf_43961edf7d05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#OWLObjectProperty_69a06433_d176_429b_804f_413d5894074e"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_efa3dafb_8252_4fa3_bb3a_e56f85ed1947"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_16da680d_c9b4_4a0b_bdcd_97ccce2b6abf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#OWLObjectProperty_7281ff24_fa9d_46db_b356_992f78cfd409"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_efa3dafb_8252_4fa3_bb3a_e56f85ed1947"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_59ef3188_ecc1_4d9c_9de8_9bd141b19000"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#OWLDataProperty_353d7e0f_7ca4_4120_9b48_80535161484c"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_59ef3188_ecc1_4d9c_9de8_9bd141b19000"/>
+        <Literal>Example NeuroAI Paper</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#OWLObjectProperty_69a06433_d176_429b_804f_413d5894074e"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectProperty_6954ec35_fdba_4f1c_a32a_3e72a05104d8"/>
+        <Class IRI="#OWLClass_5f9e7cae_cb73_4fe5_837c_0695f412e5f5"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectProperty_69a06433_d176_429b_804f_413d5894074e"/>
+        <Class IRI="#OWLClass_febf2e31_ebf1_40a3_8329_fcea6ea901bb"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectProperty_6e3fec05_b7af_4ace_b774_ad33e56971b2"/>
+        <Class IRI="#OWLClass_002242ed_a377_4e95_b1b0_ead860e9906e"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectProperty_7281ff24_fa9d_46db_b356_992f78cfd409"/>
+        <Class IRI="#OWLClass_febf2e31_ebf1_40a3_8329_fcea6ea901bb"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectProperty_86cb5373_9540_4ddd_8c19_9efe9bfa9070"/>
+        <Class IRI="#OWLClass_5f9e7cae_cb73_4fe5_837c_0695f412e5f5"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectProperty_a068f00e_9895_43b9_9b0c_a9e561361e62"/>
+        <Class IRI="#OWLClass_93f641ed_6a77_4f81_818e_7ec5940555be"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectProperty_6954ec35_fdba_4f1c_a32a_3e72a05104d8"/>
+        <Class IRI="#OWLClass_93f641ed_6a77_4f81_818e_7ec5940555be"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectProperty_69a06433_d176_429b_804f_413d5894074e"/>
+        <Class IRI="#OWLClass_93f641ed_6a77_4f81_818e_7ec5940555be"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectProperty_6e3fec05_b7af_4ace_b774_ad33e56971b2"/>
+        <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectProperty_7281ff24_fa9d_46db_b356_992f78cfd409"/>
+        <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectProperty_86cb5373_9540_4ddd_8c19_9efe9bfa9070"/>
+        <Class IRI="#OWLClass_bc953cc6_9e5a_4157_8df4_d2688bbdfd2a"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectProperty_a068f00e_9895_43b9_9b0c_a9e561361e62"/>
+        <Class IRI="#OWLClass_002242ed_a377_4e95_b1b0_ead860e9906e"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#OWLDataProperty_25d6a7c1_769a_42a6_bad0_c2a9c5764698"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#OWLDataProperty_2f4f89cf_152a_4723_8e50_c7a75976c454"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#OWLDataProperty_353d7e0f_7ca4_4120_9b48_80535161484c"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#OWLDataProperty_419ec48f_3b82_45d2_8830_d3c26740e311"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#OWLDataProperty_fb03defe_8160_4d73_9755_d2f6b3baece6"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OWLDataProperty_25d6a7c1_769a_42a6_bad0_c2a9c5764698"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OWLDataProperty_2f4f89cf_152a_4723_8e50_c7a75976c454"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OWLDataProperty_353d7e0f_7ca4_4120_9b48_80535161484c"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#OWLClass_41c7617e_6468_4537_9e68_57f9be541012"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OWLDataProperty_419ec48f_3b82_45d2_8830_d3c26740e311"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#OWLClass_002242ed_a377_4e95_b1b0_ead860e9906e"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OWLDataProperty_fb03defe_8160_4d73_9755_d2f6b3baece6"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#OWLDataProperty_25d6a7c1_769a_42a6_bad0_c2a9c5764698"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#OWLDataProperty_2f4f89cf_152a_4723_8e50_c7a75976c454"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#OWLDataProperty_353d7e0f_7ca4_4120_9b48_80535161484c"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#OWLDataProperty_419ec48f_3b82_45d2_8830_d3c26740e311"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#OWLDataProperty_fb03defe_8160_4d73_9755_d2f6b3baece6"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_002242ed_a377_4e95_b1b0_ead860e9906e</IRI>
+        <Literal xml:lang="fr">ExperimentalEvidence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_41c7617e_6468_4537_9e68_57f9be541012</IRI>
+        <Literal xml:lang="fr">ResearchPaper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_4666bf9a_fbd1_45d7_bdcb_763ba246a9c8</IRI>
+        <Literal xml:lang="fr">NeurosciencePrinciple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_5f9e7cae_cb73_4fe5_837c_0695f412e5f5</IRI>
+        <Literal xml:lang="fr">AIArchitecture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_93f641ed_6a77_4f81_818e_7ec5940555be</IRI>
+        <Literal xml:lang="fr">ComputationalPrinciple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_bc953cc6_9e5a_4157_8df4_d2688bbdfd2a</IRI>
+        <Literal xml:lang="fr">AITask</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_febf2e31_ebf1_40a3_8329_fcea6ea901bb</IRI>
+        <Literal xml:lang="fr">BiologicalMechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLDataProperty_25d6a7c1_769a_42a6_bad0_c2a9c5764698</IRI>
+        <Literal xml:lang="fr">publicationYear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLDataProperty_2f4f89cf_152a_4723_8e50_c7a75976c454</IRI>
+        <Literal xml:lang="fr">doi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLDataProperty_353d7e0f_7ca4_4120_9b48_80535161484c</IRI>
+        <Literal xml:lang="fr">paperTitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLDataProperty_419ec48f_3b82_45d2_8830_d3c26740e311</IRI>
+        <Literal xml:lang="fr">sourcePage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLDataProperty_fb03defe_8160_4d73_9755_d2f6b3baece6</IRI>
+        <Literal xml:lang="fr">description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_16da680d_c9b4_4a0b_bdcd_97ccce2b6abf</IRI>
+        <Literal xml:lang="fr">AssociativeMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_4bd26d61_777e_40fe_89c5_70be2f9de2cb</IRI>
+        <Literal xml:lang="fr">MemoryAugmentedNetwork</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_59ef3188_ecc1_4d9c_9de8_9bd141b19000</IRI>
+        <Literal xml:lang="fr">NeuroAIPaper1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_c68d7048_8522_4d90_bbd5_56a349b41cf7</IRI>
+        <Literal xml:lang="fr">AssociativeMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_df1b4551_c916_4111_bdbf_43961edf7d05</IRI>
+        <Literal xml:lang="fr">ContinualLearning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_efa3dafb_8252_4fa3_bb3a_e56f85ed1947</IRI>
+        <Literal xml:lang="fr">HippocampalMemory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_6954ec35_fdba_4f1c_a32a_3e72a05104d8</IRI>
+        <Literal xml:lang="fr">implements</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_69a06433_d176_429b_804f_413d5894074e</IRI>
+        <Literal xml:lang="fr">inspires</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_6e3fec05_b7af_4ace_b774_ad33e56971b2</IRI>
+        <Literal xml:lang="fr">discussedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_7281ff24_fa9d_46db_b356_992f78cfd409</IRI>
+        <Literal xml:lang="fr">studiedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_86cb5373_9540_4ddd_8c19_9efe9bfa9070</IRI>
+        <Literal xml:lang="fr">appliedTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_a068f00e_9895_43b9_9b0c_a9e561361e62</IRI>
+        <Literal xml:lang="fr">supportedBy</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
